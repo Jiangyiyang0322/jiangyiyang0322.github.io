@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl">
+  
+  
+  
+  
+  <title>JyyHyue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="JyyHyue">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="JyyHyue">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JyyHyue">
+  
+    <link rel="alternative" href="/atom.xml" title="JyyHyue" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/图片1.jpg">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+    
+    
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet">
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/hy.jpg" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Micky_Yang</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/archives/Linux/">Linux学习</a></li>
+                        
+                            <li><a href="/archives/Python">Python学习</a></li>
+                        
+                            <li><a href="/archives/Network">Docker学习</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github" target="_blank" href="/xxxxx" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱编程,爱运动</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Micky_Yang</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/hy.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Micky_Yang</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/archives/Linux/">Linux学习</a></li>
+                
+                    <li><a href="/archives/Python">Python学习</a></li>
+                
+                    <li><a href="/archives/Network">Docker学习</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-我们在一起的第一百天" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/05/22/我们在一起的第一百天/" class="article-date">
+      <time datetime="2019-05-22T10:07:38.000Z" itemprop="datePublished">2019-05-22</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/我们在一起的第一百天/">我们在一起的第一百天</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>​    胡悦小可爱，今天是我们在一起的第一百天纪念日，有没有觉得时间过得很慢呢（我觉得很慢很慢，没有你的日子每天都很慢O_O），一百天就是两千四百个小时、十四万四千分钟、八百六十四万秒钟；每一秒每一分对我来说都是温馨甜蜜的。记得第一次和你视频是在冬天的大年初六吧，我说我长的不太好看，痘痘有点多；你却说你一点也不在意，觉得我很特殊想看看我的样子，当时我看到你的第一眼觉得你黑黑的长头发好迷人啊，长的也是那种很单纯很乖巧的小女生模样，不知道你看我到我的第一样是什么感觉？（这个问题我问过你，你跟我说你忘记了！！！）那个时候你还在打寒假工，家里的冬天特别冷，你还在外面工作我觉得你真的优秀和其他娇生惯养的女生不一样，从那个时候起，我就有点喜欢你了，一半是因为你很单纯另一半当然是喜欢上你的美色了呀！然后每天都会和你在一起聊很多很多，后来发现我们都不喜欢平庸，越来越有一样的理想和想过的生活，所以我们就顺顺利利的在一起啦。我也有了一个我每天想念每天着迷的小可爱。我们也有过分歧、有过短暂的冲动后的别离（是我太混蛋太辜负你了）；开学来学校的时候，我特别希望能在你去成都之前，在武汉可以见见你，可是你特别害羞特别害怕，我们就这样错过见面的机会。的确你也需要一些时间准备；后来在学校的每一天，我们每天都要视频很久很久，有的时候我在学校特别颓废，特别丧的时候，都是宝宝你一直陪着我鼓励我，你对我说：“每个人都是普通人，累了就歇一歇，没人会怪你的，我一直都相信你，永远都会陪着你的”。这个时候我就知道，我不需要证明给世界上所有人看，只要有你相信我，有你夸我，我就非常非常知足了，任何人如何看我如何评价我都不过是没用的废话而已。只要有你在，世界都是温暖的。</p>
+<p>​    现在是不是都不会想到我会五一去成都找你呢？我也觉得像梦一样，只不过这个短暂的梦现在醒了而已。我在去的路上在动车里还在想，你会不会觉得我长的太丑了而不见我，当时想了很多很多，那也是我一个人去过最远的城市，虽然车程很远，路途有一些劳累。但是，我还是见到你了，见到了我最爱最想念的你，去到你们学校，你还没下课，我在运动场上等你，其实我也特别紧张特别的害怕，一直在那想着我该和你说什么呢？怎么样找一些话题才不会尴尬呢？想的特别的多，就在那徘徊的走着的时候；你就来了，短而有气质的头发，粉红色的短袖，白色的运动鞋和非常好看的发卡；那时候我像是看到小仙女一样，纯洁的不食烟火一般。我不知道当时为什么我木讷了，不知道说什么话了，你带我去了学校外面的小店吃饭，我和你并排走着，心里非常紧张，害怕我说错话，害怕我在你心里的第一印象不好。我们点了两碗蛋炒饭，我把鸡蛋给你吃了（那个炒饭特别难吃~_~），我也没坐你对面而是大胆的坐在你身边，你显得更害羞和不自然了。我一会吃饭一会看你，其实我心里的想法是：俺的媳妇怎么这么好看呢？我这个屌丝上辈子到底做了什么好事？下午我就陪你去上课，哈哈哈，也没有想到我上去给所有人同学做自我介绍、大声的说我是来陪你过五一的吧。其实我不是特别的爱说话爱上讲台的，我也不知道当时我是怎么了，你们老师让我上去的时候，我就知道不能怂，不就是上去做自我介绍吗，又不会怎么样，当时我说我是来陪你的，你都害羞的把脸都藏到桌子里面去了哈哈哈。下去看你脸都红的不行，一直怪我。有时候真的得感叹缘分的奇妙，真的没有幻想过，我能陪你上课、陪你去操场散步、陪你吃饭、陪你逛街。我牵着你的手的时候，真的感觉特别的梦境一般，可你又那么真实那么动人。在成都的五天里，我们一起坐公交、一起睡觉、一起吃焖锅、一起去宽窄巷子、一起去武侯祠、一起唱歌、一起散步；我有时候真的好希望我们在一起的时候时间能慢一点，让我多享受一点和你在一起的时光，可是有的时候我又多希望时间可以快一点再快一点，这样我就能再见到小可爱你。可是时间就是这样固定的，我没有时光机器。我能做的就是等待和努力，等待你来武汉，努力学习让自己变得更强大，每天晚上学习到十点以后，都非常的累非常的疲惫，但是又很喜悦晚上回宿舍了能看到我的宝宝，异地恋会使我们变得更好，更懂得珍惜对方，我们都不可以掉队知道吗？我们还有特别特别美好的未来呢！</p>
+<p><a href="/images/jyyhy.jpg">“我们美美的合照”</a>宝宝，I Miss You</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 Micky_Yang
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit">极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
